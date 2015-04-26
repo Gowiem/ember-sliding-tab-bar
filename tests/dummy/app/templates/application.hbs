@@ -1,3 +1,7 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2 id="title">Sliding Tab Bar Addon Example</h2>
 
-{{outlet}}
+{{#sliding-tab-bar}}
+  <li>{{#link-to 'route1'}}Route 1{{/link-to}}</li>
+  <li>{{#link-to 'route2'}}Route 2{{/link-to}}</li>
+  <li>{{#link-to 'route3'}}Route 3 with a Long Name{{/link-to}}</li>
+{{/sliding-tab-bar}}
