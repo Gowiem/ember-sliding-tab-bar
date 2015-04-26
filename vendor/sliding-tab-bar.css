@@ -1,0 +1,37 @@
+.sliding-tab-bar {
+  height: 40px;
+  list-style-type: none;
+  background-color: #fff;
+  border-bottom: solid 1px #dadada;
+  padding-left: 10px;
+  position: relative;
+}
+
+.sliding-tab-bar li {
+  color: #e0e0e0;
+  float: left;
+  font-size: 1rem;
+}
+
+.sliding-tab-bar li a {
+  color: #a6a6a6;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  padding: 10px 10px 14px;
+}
+
+.sliding-tab-bar li a.active {
+  color: #3e4142;
+  padding-bottom: 10px;
+}
+
+.sliding-tab-bar li.tab-highlight {
+  position: absolute;
+  bottom: 0px;
+  height: 100%;
+  border-bottom: solid 4px #f04123;
+  -webkit-transition: all 0.45s ease-in-out;
+  -moz-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
