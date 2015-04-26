@@ -17,7 +17,10 @@ export default Ember.Component.extend({
   tagName: 'ul',
   classNames: ['sliding-tab-bar'],
 
-  setup: function() {
+  // Setup
+  didInsertElement: function() {
+    this._super();
+
     // If MutationObserver are supported then we do our setup, otherwise
     // we set some CSS on the body and remove our tab-highlight element.
     if (BrowserMutationObserver) {
@@ -28,7 +31,14 @@ export default Ember.Component.extend({
       // TODO: remove hardcoded color
       Ember.$('<style>ul.tab-bar li a.active { border-bottom: solid 4px #f04123; }</style>').appendTo('body');
     }
-  }.on('didInsertElement'),
+  },
+
+  // Disconnect Observer
+  willDestroyElement: function() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  },
 
   setupMutationObserver: function() {
     var $liElements = this.$('li').not('.tab-highlight'),
@@ -50,18 +60,12 @@ export default Ember.Component.extend({
     this.moveHighlightEl($activeEl);
   },
 
-  disconnectObserver: function() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
-  }.on('willDestroyElement'),
-
   moveHighlightEl: function($activeEl) {
     var $tabHighlightEl = this.$('.tab-highlight');
 
     if ($activeEl.hasClass('deactivated')) { return; }
 
-    if ($activeEl.exists()) {
+    if ($activeEl.length !== 0) {
       $tabHighlightEl.css({ 'left': $activeEl.position().left,
         'width': $activeEl.width() });
     }
