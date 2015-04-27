@@ -19,6 +19,7 @@
   display: block;
   font-weight: 600;
   padding: 10px 10px 14px;
+  text-decoration: none;
 }
 
 .sliding-tab-bar li a.active {

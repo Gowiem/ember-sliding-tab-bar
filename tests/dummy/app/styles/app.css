@@ -1,0 +1,41 @@
+* {
+  margin: 0 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  padding: 30px 20px 20px;
+}
+
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header h2 {
+  float: left;
+}
+
+.actions {
+  float: right;
+}
+
+.actions button {
+  font-weight: 500;
+  color: white;
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0 15px;
+  background-color: #35b67b;
+  border: solid 1px #35b67b;
+  font-size: 12px;
+  line-height: 1.5rem;
+  margin-right: 5px;
+}
+
+.actions button:focus {
+  outline: none;
+};

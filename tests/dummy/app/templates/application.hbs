@@ -1,7 +1,14 @@
-<h2 id="title">Sliding Tab Bar Addon Example</h2>
+<header>
+  <h2 id="title">Sliding Tab Bar Addon Example</h2>
+  <div class="actions">
+    <button {{action 'back'}}>Back</button>
+    <button {{action 'continue'}}>Continue</button>
+  </div>
+</header>
 
 {{#sliding-tab-bar}}
-  <li>{{#link-to 'route1'}}Route 1{{/link-to}}</li>
-  <li>{{#link-to 'route2'}}Route 2{{/link-to}}</li>
-  <li>{{#link-to 'route3'}}Route 3 with a Long Name{{/link-to}}</li>
+  <li>{{#link-to '1'}}Route 1{{/link-to}}</li>
+  <li>{{#link-to '2'}}Route 2{{/link-to}}</li>
+  <li>{{#link-to '3'}}Route 3 has a long name{{/link-to}}</li>
+  <li>{{#link-to '4'}}Route 4{{/link-to}}</li>
 {{/sliding-tab-bar}}
