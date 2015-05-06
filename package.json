@@ -1,6 +1,6 @@
 {
   "name": "ember-sliding-tab-bar",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "ember-sliding-tab-bar shows the active tab by using a sliding bottom border which reacts to clicks and route changes.",
   "directories": {
     "doc": "doc",
