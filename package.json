@@ -1,7 +1,7 @@
 {
   "name": "ember-sliding-tab-bar",
   "version": "0.0.4",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "ember-sliding-tab-bar shows the active tab by using a sliding bottom border which reacts to clicks and route changes.",
   "directories": {
     "doc": "doc",
     "test": "tests"
